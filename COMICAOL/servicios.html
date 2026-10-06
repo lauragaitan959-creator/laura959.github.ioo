@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMICAOL - Tarjetas</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background:#fdf8f0;padding:15px}
+.tarjeta{
+  background:#fff;
+  border:2.5px solid #222;
+  border-radius:20px;
+  padding:20px;
+  max-width:900px;
+  margin:0 auto 30px auto;
+}
+.tarjeta h2{
+  text-align:center;
+  font-weight:800;
+  font-size:1.6rem;
+  margin-bottom:18px;
+}
+
+/* CAFÉ - 1 IMAGEN + TEXTO */
+.lista-cafe{
+  display:flex;
+  flex-direction:column;
+  gap:50px;
+}
+.item-cafe{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:50px;
+  align-items:center;
+}
+.item-cafe .foto{
+  border:2px solid #222;
+  border-radius:12px;
+  height:130px;
+  background:#eee;
+  overflow:hidden;
+}
+.item-cafe .foto img{width:100%;height:100%;object-fit:cover}
+.item-cafe .desc{
+  border:2px solid #222;
+  border-radius:12px;
+  padding:14px;
+  min-height:130px;
+  font-size:.9rem;
+}
+
+/* PROCESO - SOLO IMAGEN + NOMBRE */
+.proceso-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.proceso-item{
+  border:2px solid #222;
+  border-radius:14px;
+  padding:10px;
+  text-align:center;
+}
+.proceso-item .foto{
+  border:2px solid #222;
+  border-radius:10px;
+  height:110px;
+  background:#eee;
+  overflow:hidden;
+}
+.proceso-item .foto img{width:100%;height:100%;object-fit:cover}
+.proceso-item .nombre{
+  margin-top:8px;
+  font-weight:700;
+  font-size:.9rem;
+  border:1.5px solid #222;
+  border-radius:20px;
+  padding:5px;
+  background:#f9f9f3;
+}
+
+/* MAQUINARIA */
+.lista-maq{display:flex;flex-direction:column;gap:15px}
+.item-maq{
+  display:grid;
+  grid-template-columns:130px 1fr 130px;
+  gap:12px;
+  align-items:center;
+}
+.item-maq .foto{
+  border:2px solid #222;
+  border-radius:12px;
+  height:100px;
+  background:#eee;
+  overflow:hidden;
+}
+.item-maq .foto img{width:100%;height:100%;object-fit:cover}
+.item-maq .desc{
+  border:2px solid #222;
+  border-radius:12px;
+  padding:12px;
+  min-height:100px;
+  font-size:.9rem;
+}
+.item-maq .contacto{
+  border:2px solid #222;
+  border-radius:12px;
+  padding:10px;
+  text-align:center;
+  font-size:.8rem;
+  font-weight:700;
+}
+.item-maq .contacto span{
+  display:block;
+  background:#f2f2f2;
+  border:1.5px solid #222;
+  border-radius:20px;
+  padding:6px;
+  margin-top:6px;
+}
+
+@media(max-width:650px){
+  .proceso-grid{grid-template-columns:1fr 1fr}
+  .item-cafe{grid-template-columns:110px 1fr}
+  .item-maq{grid-template-columns:90px 1fr}
+  .item-maq .contacto{grid-column:1 / -1}
+}
+</style>
+</head>
+<body>
+
+<!-- 1. CAFÉ -->
+<div class="tarjeta">
+  <h2>CAFÉ</h2>
+  <div class="lista-cafe">
+    <div class="item-cafe">
+      <div class="foto"><img src="cafe.webp"></div>
+      <div class="desc">
+        <b>Café COMICAOL</b><br><br>
+        
+        La Cooperativa Mixta de Caficultores de Oriente Limitada (COMICAOL) brinda a sus productores el servicio de procesamiento de café, contribuyendo al adecuado manejo y acondicionamiento del grano para garantizar su calidad.
+        El servicio comprende la recepción del café, control de peso, trilla, tostado, molido y sellado, de acuerdo con los requerimientos establecidos para el adecuado procesamiento y presentación del producto.
+        Este servicio permite a los productores contar con el apoyo de la cooperativa para obtener un producto con mejores condiciones de calidad y presentación para su comercialización.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. PROCESO - SOLO FOTO + NOMBRE -->
+<div class="tarjeta">
+  <h2>PROCESO DEL CAFE</h2>
+  <div class="proceso-grid">
+    <div class="proceso-item">
+      <div class="foto"><img src="trillado.jpg"></div>
+      <div class="nombre">Trillado</div>
+    </div>
+    <div class="proceso-item">
+      <div class="foto"><img src=""></div>
+      <div class="nombre">Lavado</div>
+    </div>
+    <div class="proceso-item">
+      <div class="foto"><img src="tostado.jpg"></div>
+      <div class="nombre">Tostado</div>
+    </div>
+    <div class="proceso-item">
+      <div class="foto"><img src="PROCESO-4.jpg"></div>
+      <div class="nombre">Molido</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. MAQUINARIA -->
+<div class="tarjeta">
+  <h2>MAQUINARIA</h2>
+  <div class="lista-maq">
+    <div class="item-maq">
+      <div class="foto"><img src="MAQUINA-1.jpg"></div>
+      <div class="desc"><b>Trilladora Modelo X</b><br>Descripción...</div>
+      <div class="contacto">Contacto:<span>📞 9383-0959</span></div>
+    </div>
+  </div>
+</div>
+
+ <div style="width:100%; display:flex; justify-content:center; margin: 50px 0 40px 0;">
+  <a href="index.html" style="
+    display:inline-block;
+    background-color: #2eb5e5;
+    color: #3E2723;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #3E2723;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  ">← Volver al Inicio</a>
+
+
+</body>
+</html>

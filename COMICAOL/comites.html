@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMICAOL - COMITES</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #c8e6c9; /* era #A8D5BA - lo cambié a beige pergamino */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      padding-bottom: 100px;
+    }
+    h1.principal {
+      color: #3E2723;
+      text-align: center;
+      font-weight: 700;
+      margin: 50px 0 30px 0;
+      font-size: 38px;
+    }
+
+    /* --- NUEVA TARJETA PARA CADA COMITE --- */
+    .tarjeta-comite{
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto 50px auto;
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 3px solid #C19A6B;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    .tarjeta-header{
+      background: #3E2723; /* café muy oscuro */
+      padding: 16px;
+    }
+    .tarjeta-header h2{
+      color: #F5EFE6;
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      padding: 28px;
+    }
+    .card {
+      background: #EADDCF;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+    .btn-comite {
+      display: inline-block;
+      background-color: #722F37; /* tu café vino - era #bcaaa4 */
+      color: #F5EFE6;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+    .btn-comite:hover { background-color: #3E2723; }
+
+    /* Familia */
+    .seccion-galeria-final { padding: 20px; max-width: 1100px; margin: 0 auto; }
+    .seccion-galeria-final h2 { text-align: center; color: #3E2723; margin-bottom: 25px; font-size: 28px; }
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+    .galeria-item { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .galeria-item img{ width: 100%; height: 200px; object-fit: cover; }
+
+    /* Botón Volver al inicio - YA CENTRADO */
+    .btn-inicio {
+      display: inline-block;
+      padding: 12px 32px;
+      background-color: #722F37;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(114, 47, 55, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-inicio:hover { background-color: #3E2723; transform: translateY(-2px); }
+  </style>
+</head>
+<body id="top">
+
+  <h1 class="principal">GALERIA DE COMITES</h1>
+
+  <!-- COMITE DE GENERO -->
+  <div class="tarjeta-comite">
+    <div class="tarjeta-header"><h2>COMITE DE GENERO</h2></div>
+    <div class="gallery">
+      <div class="card"><img src="comite de ge1.jpeg" alt="Comité de Género 1"></div>
+      <div class="card"><img src="comite de ge2.jpeg" alt="Comité de Género 2"></div>
+      <div class="card"><img src="comite de ge3.jpeg" alt="Comité de Género 3"></div>
+    </div>
+    <a href="comite-genero.html" class="btn-comite" target="_blank">Ver más información del Comité</a>
+  </div>
+
+  <!-- COMITE DE EDUCACION -->
+  <div class="tarjeta-comite">
+    <div class="tarjeta-header"><h2>COMITE DE EDUCACION</h2></div>
+    <div class="gallery">
+      <div class="card"><img src="c:\Users\USERS\Desktop\COMICAOL\comite de edu1.jpeg" alt=""></div>
+      <div class="card"><img src="c:\Users\USERS\Desktop\COMICAOL\comite de edu2.jpeg" alt=""></div>
+      <div class="card"><img src="c:\Users\USERS\Desktop\COMICAOL\comite de edu3.jpeg" alt=""></div>
+    </div>
+    <a href="comite de educacion.html" class="btn-comite" target="_blank">Ver más información del Comité</a>
+  </div>
+
+  <!-- COMITE DE JUVENTUD -->
+  <div class="tarjeta-comite">
+    <div class="tarjeta-header"><h2>COMITE DE JUVENTUD</h2></div>
+    <div class="gallery">
+      <div class="card"><img src="c:\Users\USERS\Desktop\COMICAOL\comite de juv1.jpeg" alt=""></div>
+      <div class="card"><img src="c:\Users\USERS\Desktop\COMICAOL\comite de juv2.jpeg" alt=""></div>
+      <div class="card"><img src="c:\Users\USERS\Desktop\COMICAOL\comite de juv3.jpeg" alt=""></div>
+    </div>
+    <a href="comite de juventud.html" class="btn-comite" target="_blank">Ver más información del Comité</a>
+  </div>
+
+  <!-- COMITE DE COMERCIALIZACION - CORREGIDO -->
+  <div class="tarjeta-comite">
+    <div class="tarjeta-header"><h2>COMITE DE COMERCIALIZACION</h2></div>
+    <div class="gallery">
+      <div class="card"><img src="comi1.jpeg" alt=""></div>
+      <div class="card"><img src="comi2.jpeg" alt=""></div>
+      <div class="card"><img src="comi3.jpeg" alt=""></div>
+    </div>
+    <a href="comite de comercializacion.html" class="btn-comite" target="_blank">Ver más información del Comité</a>
+  </div>
+
+  <!-- FAMILIA COMICAOL TAMBIEN EN TARJETA -->
+  <div class="tarjeta-comite">
+    <div class="tarjeta-header"><h2>FAMILIA COMICAOL</h2></div>
+    <section class="seccion-galeria-final">
+      <div class="galeria-grid">
+        <div class="galeria-item"><img src="familia1.jpeg" alt=""></div>
+        <div class="galeria-item"><img src="familia2.jpeg" alt=""></div>
+        <div class="galeria-item"><img src="familia3.jpeg" alt=""></div>
+        <div class="galeria-item"><img src="familia4.jpeg" alt=""></div>
+        <div class="galeria-item"><img src="familia5.jpeg" alt=""></div>
+      </div>
+    </section>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="index.html" class="btn-inicio">← Volver al Inicio</a>
+  </div>
+
+</body>
+</html>
+

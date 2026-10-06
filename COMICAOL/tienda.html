@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMICAOL - Tienda Oficial</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background:#fdf8f0;color:#3a3a3a}
+header{background:linear-gradient(135deg,#1a5d1a,#2e8b57);color:#fff;padding:16px 25px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.cart-icon{background:#d4ed7a;color:#1a5d1a;padding:8px 18px;border-radius:50px;font-weight:700;cursor:pointer}
+.cart-icon span{background:#1a5d1a;color:#fff;padding:2px 8px;border-radius:50%;margin-left:6px}
+.hero{text-align:center;padding:50px 20px;background:radial-gradient(circle at top,#e8f5e9,#fdf8f0)}
+.hero h2{font-size:2.4rem;color:#1a5d1a;font-weight:800}
+.seccion-titulo{text-align:center;margin:45px 0 20px 0;color:#4A1C1C;font-size:2rem;font-weight:800}
+.subtitulo{text-align:center;color:#6b5a44;margin:-10px auto 25px auto;max-width:700px;padding:0 20px}
+.tipos-grid{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:0 20px}
+.productos-grid{max-width:1250px;margin:25px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:0 20px 100px 20px}
+@media(max-width:1000px){.productos-grid,.tipos-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.productos-grid,.tipos-grid{grid-template-columns:1fr}}
+.tipo-card,.producto{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.tipo-img,.prod-img{width:100%;height:220px;overflow:hidden;cursor:zoom-in;background:#f5f5f5}
+.tipo-img img,.prod-img img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.tipo-img img.zoom,.prod-img img.zoom{transform:scale(2);cursor:zoom-out;z-index:5;position:relative}
+.tipo-info,.info{padding:16px 18px}
+.tipo-info h3,.info h4{color:#1a5d1a;font-weight:800}
+.precio{color:#0d9488;font-weight:800;font-size:1.15rem;margin:8px 0}
+.btn-add{background:linear-gradient(135deg,#7bb342,#1a5d1a);color:#fff;border:none;padding:10px;border-radius:50px;font-weight:700;cursor:pointer;width:100%}
+#carrito{max-width:650px;margin:30px auto;background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.15);display:none;position:relative}
+#carrito.activo{display:block}
+.item-carrito{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee;font-size:.9rem}
+.total{font-weight:800;font-size:1.4rem;color:#1a5d1a;text-align:right;margin:15px 0}
+/* FORMULARIO NUEVO */
+.form-group{margin:12px 0}
+.form-group label{font-size:.85rem;font-weight:700;color:#4A1C1C;display:block;margin-bottom:5px}
+.form-group input, .form-group textarea, .form-group select{width:100%;padding:11px 14px;border:1.5px solid #ddd;border-radius:10px;font-family:'Poppins';font-size:.9rem;outline:none}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus{border-color:#1a5d1a}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+.btn{padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;border:none;cursor:pointer;width:100%;margin-top:10px;text-align:center}
+.btn-verde{background:#25D366;color:#fff;font-size:1rem}
+.btn-gris{background:#eee;color:#555}
+.btn-flotante{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 15px rgba(0,0,0,.3);z-index:999;text-decoration:none}
+.aviso{font-size:.78rem;color:#888;background:#fffbe6;padding:10px;border-radius:10px;margin:10px 0;border:1px solid #ffe58f}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>COMICAOL Tienda</h1>
+  <div class="cart-icon" onclick="verCarrito()">🛒 <span id="contador">0</span></div>
+</header>
+
+<div class="hero">
+  <h2>¿Qué tipo de café quieres?</h2>
+  <p>Elige tu preparación arriba y tu grano abajo</p>
+</div>
+
+<h2 class="seccion-titulo">1.Tipos de cafes que puedes realizar</h2>
+<div class="tipos-grid">
+  <div class="tipo-card"><div class="tipo-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="cafe4.jpg"></div><div class="tipo-info"><h3>☕ Cafe venes</h3>Cafe, Crema batida,Cocoa<p></p></div></div>
+  <div class="tipo-card"><div class="tipo-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="cafe5.jpg"></div><div class="tipo-info"><h3>☕ Vainilla Ice late Frio</h3><p>Cafe, Leche, Azucar, Canela</p></div></div>
+  <div class="tipo-card"><div class="tipo-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=500"></div><div class="tipo-info"><h3>🤎 Capuccino</h3><p>Espresso + leche espumada.</p></div></div>
+  <div class="tipo-card"><div class="tipo-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500"></div><div class="tipo-info"><h3>🥛 Latte</h3><p>Mucha leche, poco café.</p></div></div>
+  <div class="tipo-card"><div class="tipo-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=500"></div><div class="tipo-info"><h3>🍫 Mocaccino</h3><p>Con chocolate.</p></div></div>
+  <div class="tipo-card"><div class="tipo-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500"></div><div class="tipo-info"><h3>🧊 Cold Brew</h3><p>Frío 20h infusionado.</p></div></div>
+</div>
+
+<h2 class="seccion-titulo">2. Elige tu café en grano (20)</h2>
+<div class="productos-grid">
+  <!-- PRODUCTO 1 AL 20 - Cambia src="..." por tu foto -->
+  <div class="producto"><div class="prod-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="cafe1.jpg"></div><div class="info"><h4>1.Cafe de montaña </h4><div class="precio">150.00 Lps</div><button class="btn-add" onclick="agregar('Cafe de montaña',150)">Agregar</button></div></div>
+  <div class="producto"><div class="prod-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="cafe2.jpg"></div><div class="info"><h4>2.Cafe en grano</h4><div class="precio">150.00 Lps</div><button class="btn-add" onclick="agregar('Cafe en grano',150)">Agregar</button></div></div>
+  <div class="producto"><div class="prod-img" onclick="this.querySelector('img').classList.toggle('zoom')"><img src="cafe3.jpg"></div><div class="info"><h4>3.Cafe manos de mujer</h4><div class="precio">200.00 Lps</div><button class="btn-add" onclick="agregar('cafe manos de mujer',200)">Agregar</button></div></div>
+</div>
+
+<!-- CARRITO CON FORMULARIO DE DOMICILIO -->
+<div id="carrito">
+  <h2 style="color:#1a5d1a">🛒 Tu Pedido</h2>
+  <div id="lista-carrito" style="margin:15px 0"></div>
+  <div class="total">Total: $<span id="total">0.00</span></div>
+  <hr style="margin:20px 0;border:none;border-top:2px dashed #ddd">
+
+  <h3 style="color:#1a5d1a;margin-bottom:12px">📦 Datos para envío a domicilio</h3>
+  
+  <div class="form-group"><label>Nombre completo *</label><input type="text" id="nombre" placeholder="Ej: Juan Pérez"></div>
+  <div class="form-row">
+    <div class="form-group"><label>Teléfono *</label><input type="tel" id="telefono" placeholder="Ej: 93830959"></div>
+    <div class="form-group"><label>Municipio *</label><select id="municipio"><option value="">Elige...</option><option>Ocotepeque</option><option>San Marcos</option><option>Sinuapa</option><option>La Labor</option><option>San Fernando</option><option>Sensenti</option><option>Otro</option></select></div>
+  </div>
+  <div class="form-group"><label>Dirección exacta *</label><textarea id="direccion" rows="2" placeholder="Colonia, calle, referencia, casa..."></textarea></div>
+  
+  <h3 style="color:#1a5d1a;margin:20px 0 12px 0">💳 Forma de pago</h3>
+  <div class="form-group"><label>Método de pago *</label><select id="pago" onchange="toggleTarjeta()"><option value="">Elige...</option><option value="Efectivo contra entrega">Efectivo contra entrega</option><option value="Transferencia BAC">Transferencia BAC</option><option value="Transferencia Atlántida">Transferencia Atlántida</option><option value="Tigo Money">Tigo Money</option><option value="Tarjeta crédito/débito">Tarjeta crédito/débito</option></select></div>
+
+  <div id="datos-tarjeta" style="display:none">
+    <div class="form-group"><label>Número de tarjeta</label><input type="text" id="tarjeta" placeholder="**** **** **** ****" maxlength="19"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Vencimiento MM/AA</label><input type="text" id="vencimiento" placeholder="12/28" maxlength="5"></div>
+      <div class="form-group"><label>CVV</label><input type="text" id="cvv" placeholder="123" maxlength="4"></div>
+    </div>
+    <div class="aviso">⚠️ Tus datos de tarjeta NO se guardan, solo se envían por WhatsApp a COMICAOL para procesar tu pago seguro. Nunca compartas tu PIN.</div>
+  </div>
+
+  <div class="form-group"><label>Nota extra (opcional)</label><textarea id="nota" rows="2" placeholder="Ej: Entregar en la tarde, molido fino..."></textarea></div>
+
+  <button class="btn btn-verde" onclick="finalizar()">📲 Enviar pedido a WhatsApp 93830959</button>
+  <button class="btn btn-gris" onclick="document.getElementById('carrito').classList.remove('activo')">Seguir comprando</button>
+</div>
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP - SIEMPRE VISIBLE EN CELULAR -->
+<a href="https://wa.me/50493830959" class="btn-flotante" target="_blank">💬</a>
+
+
+<div style="width:100%; display:flex; justify-content:center; margin: 50px 0 40px 0;">
+  <a href="index.html" style="
+    display:inline-block;
+    background-color: #7bb342;
+    color: #3E2723;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #3E2723;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  ">← Volver al Inicio</a>
+
+<script>
+let carrito=[];let total=0;
+function agregar(nombre,precio){
+  carrito.push({nombre,precio});total+=precio;
+  document.getElementById('contador').innerText=carrito.length;
+  document.getElementById('total').innerText=total.toFixed(2);
+  actualizarCarrito();
+  let c=document.getElementById('contador');c.style.transform='scale(1.4)';setTimeout(()=>c.style.transform='scale(1)',200);
+}
+function actualizarCarrito(){
+  let html="";carrito.forEach(p=>{html+=`<div class="item-carrito"><span>${p.nombre}</span><span>$${p.precio.toFixed(2)}</span></div>`});
+  if(carrito.length==0) html="<p style='color:#888'>Carrito vacío</p>";
+  document.getElementById('lista-carrito').innerHTML=html;
+}
+function verCarrito(){document.getElementById('carrito').classList.toggle('activo'); if(document.getElementById('carrito').classList.contains('activo')) document.getElementById('carrito').scrollIntoView({behavior:'smooth'});}
+function toggleTarjeta(){document.getElementById('datos-tarjeta').style.display=document.getElementById('pago').value=='Tarjeta crédito/débito'?'block':'none';}
+function finalizar(){
+  if(carrito.length==0){alert('Agrega granos primero');return;}
+  let nombre=document.getElementById('nombre').value.trim();
+  let telefono=document.getElementById('telefono').value.trim();
+  let municipio=document.getElementById('municipio').value;
+  let direccion=document.getElementById('direccion').value.trim();
+  let pago=document.getElementById('pago').value;
+  if(!nombre||!telefono||!municipio||!direccion||!pago){alert('Por favor llena todos los campos con *');return;}
+  let tarjeta=document.getElementById('tarjeta').value;
+  let vencimiento=document.getElementById('vencimiento').value;
+  let cvv=document.getElementById('cvv').value;
+  let nota=document.getElementById('nota').value;
+
+  let mensaje=`¡NUEVO PEDIDO COMICAOL!%0A%0A`;
+  mensaje+=`*Cliente:* ${nombre}%0A*Tel:* ${telefono}%0A*Municipio:* ${municipio}%0A*Dirección:* ${direccion}%0A%0A`;
+  mensaje+=`*Productos:*%0A`;
+  carrito.forEach(p=>{mensaje+=`- ${p.nombre} $${p.precio}%0A`});
+  mensaje+=`%0A*Total: $${total.toFixed(2)}*%0A%0A`;
+  mensaje+=`*Pago:* ${pago}%0A`;
+  if(pago=='Tarjeta crédito/débito'){mensaje+=`Tarjeta: ${tarjeta} Vence: ${vencimiento} CVV: ${cvv}%0A`;}
+  if(nota){mensaje+=`%0A*Nota:* ${nota}%0A`;}
+
+  window.open(`https://wa.me/50493830959?text=${mensaje}`,'_blank');
+}
+
+
+</script>
+</body>
+</html>
+  

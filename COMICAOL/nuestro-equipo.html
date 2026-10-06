@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo COMICAOL</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background: #c8e6c9;;padding:25px}
+.titulo{text-align:center;color: #414141;;font-weight:800;font-size:2.2rem;margin-bottom:8px}
+.subtitulo{text-align:center;color:#6b5a44;margin-bottom:35px;font-size:.95rem}
+.grid{
+  max-width:1150px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:25px;
+}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{
+  background:#fff;border-radius:18px;overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);display:flex;
+  flex-direction:column;transition:.3s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.foto{width:100%;height:300px;overflow:hidden;background:#f0f0f0}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.info{padding:20px 18px 22px 18px;flex:1;display:flex;flex-direction:column}
+.info h3{color:#1a5d1a;font-weight:800;font-size:1.05rem;line-height:1.2;text-transform:uppercase}
+.info .cargo{color:#0d9488;font-weight:700;font-size:.82rem;margin:6px 0 12px 0;line-height:1.3;text-transform:uppercase}
+.info .desc{color:#555;font-size:.88rem;line-height:1.6;flex:1}
+.contacto{margin-top:15px;background:#f0fdf4;border:1px solid #bbf7d0;padding:8px 12px;border-radius:10px;font-size:.85rem;font-weight:600}
+.contacto a{color:#1a5d1a;text-decoration:none}
+.centro{text-align:center;margin-top:40px}
+.btn{display:inline-block;padding:12px 28px;background:#0d9488;color:#fff;border-radius:50px;text-decoration:none;font-weight:600}
+.btn:hover{background:#0f766e}
+</style>
+</head>
+<body>
+
+<h1 class="titulo">EQUIPO DE COMERCIALIZACION DE COMICAOL</h1>
+<p class="subtitulo">Conoce a nuestro equipo técnico y de comercialización</p>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="foto"><img src="cesar.jpg"></div>
+    <div class="info">
+      <h3>Abog. César Vicente Rodríguez</h3>
+      <div class="cargo">Presidente Junta Directiva | Encargado de Comercialización | Catador de Café</div>
+      <div class="desc">Profesional comprometido con el fortalecimiento y desarrollo de COMICAOL, con experiencia en comercialización y evaluación de café.</div>
+      <div class="contacto">📞 <a href="tel:+50433456108">+504 3345-6108</a></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="foto"><img src="niko.jpg"></div>
+    <div class="info">
+      <h3>Ing. Nickolle Sánchez</h3>
+      <div class="cargo">Catadora Q Grader CVA | Control de Calidad | Presidenta Comité de Género</div>
+      <div class="desc">Profesional comprometida con la calidad del café y el fortalecimiento del sector cafetalero. Como integrante de la tercera generación
+        cafetalera de su familia, trabaja por preservar la tradición y promover el empalme generacional, impulsando la participación de
+        las nuevas generaciones en la caficultura..</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="foto"><img src="ellan.jpg"></div>
+    <div class="info">
+      <h3>Ing. Ellan Moncada</h3>
+      <div class="cargo">Unidad Técnica | Especialista en Café</div>
+      <div class="desc">Profesional comprometido con el desarrollo y fortalecimiento de la caficultura, con interés en la investigación,
+        innovación y mejora continua de los procesos relacionados con el café.</div>
+      <div class="contacto">📞 <a href="tel:+50433281617">+504 3328-1617</a></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="foto"><img src="julio.jpg"></div>
+    <div class="info">
+      <h3>Tec. Julio Zúñiga</h3>
+      <div class="cargo">Equipo Técnico | Caficultor y Apicultor</div>
+      <div class="desc">Miembro del equipo técnico de COMICAOL y representante de la segunda generación cafetalera. Caficultor y apicultor apasionado,
+        comprometido con el café, las abejas y el fortalecimiento de las nuevas generaciones del sector.
+
+          Ganador de la competencia Catador de Mieles Jr., destaca por su dedicación, conocimiento y pasión por la caficultura y la apicultura.</div>
+    </div>
+  </div>
+
+  <!-- NUEVA AGREGADA -->
+  <div class="card">
+    <div class="foto"><img src="gise.jpg"></div>
+    <div class="info">
+      <h3>Gissela Moncada</h3>
+      <div class="cargo">Encargada de Tostaduría</div>
+      <div class="desc"> Responsable de transformar los cafés de COMICAOL, cuidando cada detalle del proceso de tostado para resaltar las características y atributos de cada grano. Apasionada por la
+           tostaduría y la calidad del café, combina su experiencia y dedicación para ofrecer cafés que respondan a las expectativas de nuestros clientes, contribuyendo a que cada taza refleje la esencia y calidad de COMICAOL.
+
+</div>
+    </div>
+  </div>
+
+   <!-- OTRO AGREGADO-->
+  <div class="card">
+    <div class="foto"><img src="fredy.jpg"></div>
+    <div class="info">
+      <h3>Fredy Roney Valle</h3>
+      <div class="cargo">Area contable Administrativa</div>
+      <div class="desc">Es el Encargado del area contable administrativa de COMICAOL, desempeñando sus funciones con comprimiso, responsabilidad y de dicacion.
+        Cuenta con mas de 6 años de trayectoria en nuestra cooperativa, aportando su experiencia al fortalecimiento de los procesos administrativos y contables.
+
+        Su labor es fundamental para el buen funcionamiento y crecimiento de COMICAO.
+</div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="centro">
+  <a href="index.html" class="btn">← Volver al Inicio</a>
+</div>
+
+</body>
+</html>

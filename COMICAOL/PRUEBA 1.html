@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Seytú</title>
+  <style>
+    :root {
+      --primary-color: #7b1fa2; /* Morado característico de Seytú */
+      --secondary-color: #e91e63;
+      --bg-color: #fdfafb;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* Encabezado */
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Galería de Productos */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding-bottom: 1.5rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin: 1rem 0 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #666;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+
+    /* Botón de Contacto */
+    .btn-buy {
+      display: inline-block;
+      background-color: #25d366; /* Verde WhatsApp */
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn-buy:hover {
+      background-color: #128c7e;
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Catálogo Seytú</h1>
+    <p>Cosmética Botánica e Hipoalergénica</p>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      
+      <!-- Producto 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x250" alt="Producto 1">
+        <h3>Espuma Limpiadora</h3>
+        <p>Limpieza profunda enriquecida con extractos de aloe vera y moringa.</p>
+        <div class="price">$25.00</div>
+        <a href="https://wa.me/1234567890?text=Hola,%20quiero%20información%20de%20la%20Espuma%20Limpiadora" class="btn-buy" target="_blank">Pedir por WhatsApp</a>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x250" alt="Producto 2">
+        <h3>Maquillaje Líquido UP+</h3>
+        <p>A prueba de agua y sudor con acabado mate de alta cobertura.</p>
+        <div class="price">$32.00</div>
+        <a href="https://wa.me/1234567890?text=Hola,%20quiero%20información%20del%20Maquillaje%20UP+" class="btn-buy" target="_blank">Pedir por WhatsApp</a>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x250" alt="Producto 3">
+        <h3>Suero Facial</h3>
+        <p>Hidratación continua con ácido hialurónico y péptidos.</p>
+        <div class="price">$28.00</div>
+        <a href="https://wa.me/1234567890?text=Hola,%20quiero%20información%20del%20Suero%20Facial" class="btn-buy" target="_blank">Pedir por WhatsApp</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Distribuidor Independiente Seytú</p>
+  </footer>
+
+</body>
+</html>
