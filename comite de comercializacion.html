@@ -1,0 +1,135 @@
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comité de Comercialización - COMICAOL</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f7f6;
+  color:#333;
+  padding:40px 20px;
+  line-height:1.6;
+}
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:40px;
+  align-items:start;
+  background:#ffffff;
+  border-radius:16px;
+  padding:45px 40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+@media(min-width:768px){
+  .container{grid-template-columns:1fr 300px}
+}
+.contenido{text-align:center}
+.badge{
+  display:inline-block;
+  font-size:.75rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  padding:6px 14px;
+  border-radius:20px;
+  margin-bottom:15px;
+  background:#e8f5e9;
+  color:#2e7d32;
+}
+h1{
+  font-size:2.2rem;
+  font-weight:700;
+  margin-bottom:16px;
+  color:#1b4332;
+}
+p{
+  color:#555;
+  font-size:1rem;
+  line-height:1.7;
+  margin-bottom:16px;
+}
+/* TARJETA DE LA FOTO A LA DERECHA */
+.card-imagen{
+  background:linear-gradient(135deg,#d8f3dc 0%,#b7e4c7 100%);
+  border-radius:16px;
+  padding:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  position:sticky;
+  top:20px;
+}
+.foto{
+  width:100%;
+  height:300px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+}
+.foto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+/* BOTONES BONITOS */
+.navegacion{
+  max-width:1000px;
+  margin:30px auto 0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+.btn{
+  display:inline-flex;
+  padding:12px 26px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.95rem;
+  transition:.3s ease;
+}
+.btn-principal{
+  background:#0d9488;
+  color:#fff;
+  box-shadow:0 4px 15px rgba(13,148,136,.35);
+}
+.btn-principal:hover{background:#0f766e;transform:translateY(-2px)}
+.btn-sec{
+  background:#fff;
+  color:#0d9488;
+  border:2px solid #0d9488;
+}
+.btn-sec:hover{background:#e6fffa}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <main class="contenido">
+    <span class="badge">Gestión Comercial</span>
+    <h1>Comité de Comercialización</h1>
+    <p>El Comité de Comercialización tiene a su cargo la gestión y supervisión de las actividades comerciales de la cooperativa, procurando que los productos cumplan con los estándares de calidad establecidos.</p>
+    <p>Entre sus funciones se encuentran la compra y venta de café, tanto en el mercado nacional como internacional, así como la búsqueda de alternativas que permitan acceder a mejores condiciones y precios diferenciados.</p>
+    <p>De esta manera, contribuye a fortalecer la comercialización de los productos y a generar mayores oportunidades para los productores asociados.</p>
+  </main>
+
+  <aside class="card-imagen">
+    <div class="foto">
+      <!-- CAMBIA EL NOMBRE POR TU FOTO -->
+      <img src="comi4.jpeg"Comité de Comercialización">
+    </div>
+  </aside>
+</div>
+
+<div class="navegacion">
+  <a href="comites.html" class="btn btn-principal">← Volver</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comité de Género</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #bcaaa4;
+      background-color: #bcaaa4;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      padding-bottom: 90px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1000px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .content-section {
+      flex: 1.2;
+      padding: 45px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .badge {
+      display: inline-block;
+      align-self: center;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1b4332;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .description {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #555555;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .actions-title {
+      font-weight: 600;
+      color: #2d6a4f;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .card-image-section {
+      flex: 0.8;
+      background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    .image-card {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* BOTON ABAJO FIJO */
+    .btn-inicio {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background-color: #0d9488;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    .btn-inicio:hover {
+      background-color: #0f766e;
+      transform: translateX(-50%) translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content-section { padding: 30px 25px; }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div class="container">
+    <div class="content-section">
+      <span class="badge">Equidad e Inclusión</span>
+      <h1 class="title">Comité de Género</h1>
+      <p class="description">
+        El Comité de Género tiene como propósito fomentar la igualdad de condiciones y oportunidades, desde una perspectiva de género, y prevenir cualquier forma de discriminación por razones de sexo, religión, raza, entre otros aspectos.
+      </p>
+      <p class="actions-title">Acciones Principales:</p>
+      <p class="description">
+        Entre sus principales acciones se encuentran el fortalecimiento de los derechos y oportunidades de las mujeres, especialmente en temas como la tenencia de la tierra y su incorporación en espacios de toma de decisiones.
+      </p>
+    </div>
+
+    <div class="card-image-section">
+      <div class="image-card">
+        <img src="comite de ge4.jpeg" alt="Comité de Género">
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTON QUE VA ABAJO -->
+  <a href="comites.html" class="btn-inicio">↑ Ir al inicio</a>
+
+</body>
+</html>

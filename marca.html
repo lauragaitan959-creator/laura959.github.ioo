@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marca Insignia - COMICAOL</title>
+<style>
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #fff; }
+  
+  .franja-verde {
+    background-color: #96C06C;
+    height: 35px;
+    width: 100%;
+  }
+
+  .contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+  }
+
+  .imagen img {
+    max-width: 220px;
+    width: 100%;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.15));
+  }
+
+  .texto {
+    flex: 1;
+    min-width: 320px;
+    text-align: center;
+    color: #1a1a1a;
+  }
+
+  .texto h2 {
+    color: #86B85F;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: -0.5px;
+  }
+
+  .texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    .contenedor { flex-direction: column; }
+    .texto h2 { font-size: 28px; }
+  }
+
+.btn{display:inline-block;padding:12px 28px;background:#96C06C;color:#fff;border-radius:50px;text-decoration:none;font-weight:600 ;}
+.btn:hover{background:#0f766e}
+
+.contenedor-boton{
+  text-align: center;
+  margin-top: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="franja-verde"></div>
+
+<div class="contenedor">
+  <div class="imagen">
+    <img src="cafe bolsa.jpeg" alt="Café Brisas de la Montaña">
+  </div>
+
+  <div class="texto">
+    <h2>Marca insignia</h2>
+    
+    <p>
+      <strong>Café Brisas de la Montaña</strong><br>
+      Café Brisas de la Montaña es el <strong>blend</strong> insignia de<br>
+      <strong>COMICAOL</strong>, creado a partir de los cafés producidos por<br>
+      nuestros socios caficultores.
+    </p>
+
+    <br>
+
+    <p>
+      Lanzado al mercado en <strong>2011</strong>, representa la unión, tradición<br>
+      y dedicación de las familias productoras de nuestra<br>
+      cooperativa, llevando en cada taza la esencia de las<br>
+      montañas de <strong>El Paraíso, Honduras.</strong>
+    </p>
+  </div>
+</div>
+
+<div class="franja-verde"></div>
+
+<div class="contenedor-boton">
+  <a href="index.html" class="btn">Volver al inicio</a>
+</div>
+
+
+</body>
+</html>

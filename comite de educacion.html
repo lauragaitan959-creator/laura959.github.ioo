@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comité de Educación</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif; 
+      background-color: #bcaaa4;
+      color: #333333;
+      line-height: 1.6;
+      padding: 40px 20px;
+      padding-bottom: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 45px 40px;
+      box-shadow: 0 10px 30px rgba(14, 9, 9, 0.08);
+    }
+    @media (min-width: 768px) {
+      .container { grid-template-columns: 1fr 300px; }
+    }
+    .contenido-educacion { text-align: center; }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1b4332;
+      text-align: center;
+    }
+    p {
+      color: #555555;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .card-imagen {
+      background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      position: sticky;
+      top: 20px;
+    }
+    .contenedor-foto {
+      width: 100%;
+      height: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contenedor-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* LINKS BONITOS PARA CONECTAR */
+    .navegacion-comites {
+      max-width: 1000px;
+      margin: 30px auto 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .btn-principal {
+      background-color: #0d9488;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(13, 148, 136, 0.35);
+    }
+    .btn-principal:hover {
+      background-color: #0f766e;
+      transform: translateY(-2px);
+    }
+    .btn-secundario {
+      background-color: #ffffff;
+      color: #0d9488;
+      border: 2px solid #0d9488;
+    }
+    .btn-secundario:hover {
+      background-color: #e6fffa;
+      transform: translateY(-2px);
+    }
+
+    .contenedor-boton{
+  width: 100%;
+  display: flex;
+  justify-content: center; /* lo centra perfecto */
+  margin: 40px 0;
+}
+
+.btn-ir-inicio{
+  display: inline-block;
+  background-color: #2eb5e5; 
+  color: #3E2723;
+  padding: 12px 32px;
+  border-radius: 50px; /* forma de píldora como tu foto */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-ir-inicio:hover{
+  background-color: #3E2723;
+  color: #F5EFE6;
+  transform: translateY(-2px);
+}
+  </style>
+</head>
+<body id="top">
+
+  <div class="container">
+    <main class="contenido-educacion">
+      <span class="badge">Formación & Desarrollo</span>
+      <h1>Comité de Educación</h1>
+      <p>El Comité de Educación orienta y desarrolla procesos de formación, capacitación e información relacionados con el movimiento cooperativo, de acuerdo con sus principios y valores.</p>
+      <p>Su labor busca fortalecer los conocimientos y capacidades de los asociados, así como preparar a las nuevas generaciones para asumir responsabilidades y desempeñar cargos directivos en la organización.</p>
+    </main>
+
+    <aside class="card-imagen">
+      <div class="contenedor-foto">
+        <img src="comite de edu4.jpeg" alt="comite-de-educacion">
+      </div>
+    </aside>
+  </div>
+
+    <div style="width:100%; display:flex; justify-content:center; margin: 50px 0 40px 0;">
+  <a href="comites.html" style="
+    display:inline-block;
+    background-color: #2eb5e5;
+    color: #3E2723;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #3E2723;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  ">← Volver al Inicio</a>
+
+    
+
+</body>
+</html>
